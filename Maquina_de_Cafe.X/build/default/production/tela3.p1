@@ -1,0 +1,419 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"23 ssd.h
+[v _ssdUpdate `(v ~T0 @X0 0 ef ]
+"23 lcd.h
+[v _lcdCommand `(v ~T0 @X0 0 ef1`uc ]
+"24
+[v _lcdData `(v ~T0 @X0 0 ef1`uc ]
+"26 pwm.h
+[v _pwmInit `(v ~T0 @X0 0 ef ]
+"23
+[v _pwmSet1 `(v ~T0 @X0 0 ef1`uc ]
+[; ;tela3.h: 4: void Tela3(void);
+[; ;tela3.h: 5: void tempo(unsigned char v);
+"26 config.h
+[p x OSC=HS ]
+"27
+[p x FCMEN=OFF ]
+"28
+[p x IESO=OFF ]
+"29
+[p x PWRT=OFF ]
+"30
+[p x BOREN=OFF ]
+"31
+[p x BORV=2 ]
+"32
+[p x WDT=OFF ]
+"33
+[p x WDTPS=1 ]
+"34
+[p x MCLRE=ON ]
+"35
+[p x LPT1OSC=OFF ]
+"36
+[p x PBADEN=ON ]
+"37
+[p x CCP2MX=PORTC ]
+"38
+[p x STVREN=OFF ]
+"39
+[p x LVP=OFF ]
+"40
+[p x XINST=OFF ]
+"41
+[p x DEBUG=OFF ]
+"43
+[p x CP0=OFF ]
+"44
+[p x CP1=OFF ]
+"45
+[p x CP2=OFF ]
+"46
+[p x CP3=OFF ]
+"47
+[p x CPB=OFF ]
+"48
+[p x CPD=OFF ]
+"50
+[p x WRT0=OFF ]
+"51
+[p x WRT1=OFF ]
+"52
+[p x WRT2=OFF ]
+"53
+[p x WRT3=OFF ]
+"54
+[p x WRTB=OFF ]
+"55
+[p x WRTC=OFF ]
+"56
+[p x WRTD=OFF ]
+"58
+[p x EBTR0=OFF ]
+"59
+[p x EBTR1=OFF ]
+"60
+[p x EBTR2=OFF ]
+"61
+[p x EBTR3=OFF ]
+"62
+[p x EBTRB=OFF ]
+[; ;lcd.h: 23: void lcdCommand(unsigned char cmd);
+[; ;lcd.h: 24: void lcdData(unsigned char valor);
+[; ;lcd.h: 25: void lcdInit(void);
+[; ;ssd.h: 22: void ssdDigit(char val, char pos);
+[; ;ssd.h: 23: void ssdUpdate(void);
+[; ;ssd.h: 24: void ssdInit(void);
+[; ;io.h: 12: enum pin_label{
+[; ;io.h: 13: PIN_A0,PIN_A1,PIN_A2,PIN_A3,PIN_A4,PIN_A5,PIN_A6,PIN_A7,
+[; ;io.h: 14: PIN_B0,PIN_B1,PIN_B2,PIN_B3,PIN_B4,PIN_B5,PIN_B6,PIN_B7,
+[; ;io.h: 15: PIN_C0,PIN_C1,PIN_C2,PIN_C3,PIN_C4,PIN_C5,PIN_C6,PIN_C7,
+[; ;io.h: 16: PIN_D0,PIN_D1,PIN_D2,PIN_D3,PIN_D4,PIN_D5,PIN_D6,PIN_D7,
+[; ;io.h: 17: PIN_E0,PIN_E1,PIN_E2,PIN_E3,PIN_E4,PIN_E5,PIN_E6,PIN_E7
+[; ;io.h: 18: };
+[; ;io.h: 20: void digitalWrite(int pin, int value);
+[; ;io.h: 21: int digitalRead(int pin);
+[; ;io.h: 22: void pinMode(int pin, int type);
+[; ;keypad.h: 23: unsigned int kpRead(void);
+[; ;keypad.h: 24: void kpDebounce(void);
+[; ;keypad.h: 25: void kpInit(void);
+[; ;pwm.h: 23: void pwmSet1(unsigned char porcento);
+[; ;pwm.h: 24: void pwmSet2(unsigned char porcento);
+[; ;pwm.h: 25: void pwmFrequency(unsigned int freq);
+[; ;pwm.h: 26: void pwmInit(void);
+"10 tela3.c
+[v _tempo `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;tela3.c: 10: void tempo(unsigned char v) {
+[e :U _tempo ]
+[v _v `uc ~T0 @X0 1 r1 ]
+[f ]
+"12
+[v _j `Vuc ~T0 @X0 1 a ]
+[v _k `Vuc ~T0 @X0 1 a ]
+[v _i `Vuc ~T0 @X0 1 a ]
+[v _l `Vuc ~T0 @X0 1 a ]
+[; ;tela3.c: 12: volatile unsigned char j, k, i, l;
+[; ;tela3.c: 14: for (l = 0; l < v; l++) {
+"14
+{
+[e = _l -> -> 0 `i `uc ]
+[e $U 5  ]
+[e :U 2 ]
+{
+[; ;tela3.c: 15: for (i = 0; i < 40; i++) {
+"15
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 40 `i 6  ]
+[e $U 7  ]
+[e :U 6 ]
+{
+[; ;tela3.c: 16: for (j = 0; j < 41; j++) {
+"16
+{
+[e = _j -> -> 0 `i `uc ]
+[e $ < -> _j `i -> 41 `i 9  ]
+[e $U 10  ]
+[e :U 9 ]
+{
+[; ;tela3.c: 17: for (k = 0; k < 3; k++);
+"17
+{
+[e = _k -> -> 0 `i `uc ]
+[e $ < -> _k `i -> 3 `i 12  ]
+[e $U 13  ]
+[e :U 12 ]
+[e ++ _k -> -> 1 `i `uc ]
+[e $ < -> _k `i -> 3 `i 12  ]
+[e :U 13 ]
+}
+"18
+}
+"16
+[e ++ _j -> -> 1 `i `uc ]
+[e $ < -> _j `i -> 41 `i 9  ]
+[e :U 10 ]
+"18
+}
+[; ;tela3.c: 18: }
+[; ;tela3.c: 19: ssdUpdate();
+"19
+[e ( _ssdUpdate ..  ]
+"20
+}
+"15
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 40 `i 6  ]
+[e :U 7 ]
+"20
+}
+[; ;tela3.c: 20: }
+[; ;tela3.c: 21: ssdUpdate();
+"21
+[e ( _ssdUpdate ..  ]
+"22
+}
+"14
+[e ++ _l -> -> 1 `i `uc ]
+[e :U 5 ]
+[e $ < -> _l `i -> _v `i 2  ]
+[e :U 3 ]
+"22
+}
+[; ;tela3.c: 22: }
+[; ;tela3.c: 23: }
+"23
+[e :UE 1 ]
+}
+"25
+[v _Tela3 `(v ~T0 @X0 1 ef ]
+{
+[; ;tela3.c: 25: void Tela3(void) {
+[e :U _Tela3 ]
+[f ]
+[; ;tela3.c: 26: (*(volatile __near unsigned char*)0xF95) = 0x00;
+"26
+[e = *U -> -> 3989 `i `*VNuc -> -> 0 `i `uc ]
+"27
+[v _i `uc ~T0 @X0 1 a ]
+[v _j `uc ~T0 @X0 1 a ]
+"28
+[v _tecla `uc ~T0 @X0 1 a ]
+[v F92 `uc ~T0 @X0 -> 11 `i s ]
+[i F92
+:U ..
+-> 70 `c
+-> 97 `c
+-> 122 `c
+-> 101 `c
+-> 110 `c
+-> 100 `c
+-> 111 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 0 `c
+..
+]
+"29
+[v _msg1 `uc ~T0 @X0 -> 11 `i a ]
+[; ;tela3.c: 27: unsigned char i, j;
+[; ;tela3.c: 28: char tecla;
+[; ;tela3.c: 29: char msg1[11] = "Fazendo...";
+[e = _msg1 F92 ]
+[v F94 `uc ~T0 @X0 -> 14 `i s ]
+[i F94
+:U ..
+-> 80 `c
+-> 101 `c
+-> 100 `c
+-> 105 `c
+-> 100 `c
+-> 111 `c
+-> 32 `c
+-> 80 `c
+-> 114 `c
+-> 111 `c
+-> 110 `c
+-> 116 `c
+-> 111 `c
+-> 0 `c
+..
+]
+"30
+[v _msg2 `uc ~T0 @X0 -> 14 `i a ]
+[; ;tela3.c: 30: char msg2[14] = "Pedido Pronto";
+[e = _msg2 F94 ]
+[; ;tela3.c: 32: lcdCommand(0x01);
+"32
+[e ( _lcdCommand (1 -> -> 1 `i `uc ]
+[; ;tela3.c: 33: lcdCommand(0X80);
+"33
+[e ( _lcdCommand (1 -> -> 128 `i `uc ]
+[; ;tela3.c: 34: for (i = 0; i < 10; i++) {
+"34
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 10 `i 16  ]
+[e $U 17  ]
+[e :U 16 ]
+{
+[; ;tela3.c: 35: lcdData(msg1[i]);
+"35
+[e ( _lcdData (1 *U + &U _msg1 * -> _i `ux -> -> # *U &U _msg1 `ui `ux ]
+"36
+}
+"34
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 10 `i 16  ]
+[e :U 17 ]
+"36
+}
+[; ;tela3.c: 36: }
+[; ;tela3.c: 37: pwmInit();
+"37
+[e ( _pwmInit ..  ]
+[; ;tela3.c: 38: pwmSet1(99);
+"38
+[e ( _pwmSet1 (1 -> -> 99 `i `uc ]
+[; ;tela3.c: 39: tempo(20000 / 100);
+"39
+[e ( _tempo (1 -> / -> 20000 `i -> 100 `i `uc ]
+[; ;tela3.c: 40: tempo(20000 / 100);
+"40
+[e ( _tempo (1 -> / -> 20000 `i -> 100 `i `uc ]
+[; ;tela3.c: 41: pwmSet1(0);
+"41
+[e ( _pwmSet1 (1 -> -> 0 `i `uc ]
+[; ;tela3.c: 42: for (;;) {
+"42
+{
+[e :U 19 ]
+{
+[; ;tela3.c: 43: ssdUpdate();
+"43
+[e ( _ssdUpdate ..  ]
+[; ;tela3.c: 44: lcdCommand(0XC0);
+"44
+[e ( _lcdCommand (1 -> -> 192 `i `uc ]
+[; ;tela3.c: 45: for (i = 0; i < 13; i++) {
+"45
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 13 `i 22  ]
+[e $U 23  ]
+[e :U 22 ]
+{
+[; ;tela3.c: 46: lcdData(msg2[i]);
+"46
+[e ( _lcdData (1 *U + &U _msg2 * -> _i `ux -> -> # *U &U _msg2 `ui `ux ]
+"47
+}
+"45
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 13 `i 22  ]
+[e :U 23 ]
+"47
+}
+[; ;tela3.c: 47: }
+[; ;tela3.c: 48: lcdCommand(0x40);
+"48
+[e ( _lcdCommand (1 -> -> 64 `i `uc ]
+[v F96 `uc ~T0 @X0 -> 32 `i s ]
+[i F96
+:U ..
+"50
+-> -> 1 `i `uc
+-> -> 3 `i `uc
+-> -> 3 `i `uc
+-> -> 7 `i `uc
+-> -> 7 `i `uc
+-> -> 15 `i `uc
+-> -> 15 `i `uc
+-> -> 31 `i `uc
+"51
+-> -> 16 `i `uc
+-> -> 24 `i `uc
+-> -> 24 `i `uc
+-> -> 28 `i `uc
+-> -> 28 `i `uc
+-> -> 30 `i `uc
+-> -> 30 `i `uc
+-> -> 31 `i `uc
+"52
+-> -> 15 `i `uc
+-> -> 15 `i `uc
+-> -> 7 `i `uc
+-> -> 3 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+"53
+-> -> 30 `i `uc
+-> -> 30 `i `uc
+-> -> 28 `i `uc
+-> -> 24 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+"54
+-> -> 0 `i `uc
+..
+]
+"49
+[v _logo1 `uc ~T0 @X0 -> 32 `i a ]
+[; ;tela3.c: 49: char logo1[32] = {
+[; ;tela3.c: 50: 0x01, 0x03, 0x03, 0x07, 0x07, 0x0F, 0x0F, 0x1F,
+[; ;tela3.c: 51: 0x10, 0x18, 0x18, 0x1C, 0x1C, 0x1E, 0x1E, 0x1F,
+[; ;tela3.c: 52: 0x0F, 0x0F, 0x07, 0x03, 0x00, 0x00, 0x00, 0x00,
+[; ;tela3.c: 53: 0x1E, 0x1E, 0x1C, 0x18, 0x00, 0x00, 0x00, 0x00
+[; ;tela3.c: 54: };
+"54
+[e = _logo1 F96 ]
+[; ;tela3.c: 55: for (i = 0; i < 32; i++)
+"55
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 32 `i 25  ]
+[e $U 26  ]
+"56
+[e :U 25 ]
+[; ;tela3.c: 56: lcdData(logo1[i]);
+[e ( _lcdData (1 *U + &U _logo1 * -> _i `ux -> -> # *U &U _logo1 `ui `ux ]
+"55
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 32 `i 25  ]
+[e :U 26 ]
+"56
+}
+[; ;tela3.c: 57: lcdCommand(0x90);
+"57
+[e ( _lcdCommand (1 -> -> 144 `i `uc ]
+[; ;tela3.c: 58: lcdData(0);
+"58
+[e ( _lcdData (1 -> -> 0 `i `uc ]
+[; ;tela3.c: 59: lcdData(1);
+"59
+[e ( _lcdData (1 -> -> 1 `i `uc ]
+[; ;tela3.c: 60: lcdCommand(0xD0);
+"60
+[e ( _lcdCommand (1 -> -> 208 `i `uc ]
+[; ;tela3.c: 61: lcdData(2);
+"61
+[e ( _lcdData (1 -> -> 2 `i `uc ]
+[; ;tela3.c: 62: lcdData(3);
+"62
+[e ( _lcdData (1 -> -> 3 `i `uc ]
+"63
+}
+[; ;tela3.c: 63: }
+[e $U 19  ]
+[e :U 20 ]
+}
+[; ;tela3.c: 64: }
+"64
+[e :UE 15 ]
+}

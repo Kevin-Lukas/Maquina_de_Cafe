@@ -1,0 +1,901 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+idloc IDLOC 5 200000 200000 8 1
+init CODE 0 0 0 4 1
+config CONFIG 4 300000 300000 E 1
+$dist/default/production\Maquina_de_Cafe.X.production.obj
+cinit CODE 0 116C 116C 56 1
+idloc IDLOC 5 200000 200000 8 1
+text0 CODE 0 BB0 BB0 120 1
+text1 CODE 0 11C2 11C2 56 1
+text2 CODE 0 FA8 FA8 78 1
+text3 CODE 0 612 612 1A6 1
+text4 CODE 0 13B2 13B2 A 1
+text5 CODE 0 ED6 ED6 D2 1
+text6 CODE 0 CD0 CD0 120 1
+text7 CODE 0 132E 132E 2A 1
+text8 CODE 0 13BC 13BC A 1
+text9 CODE 0 A8C A8C 124 1
+text10 CODE 0 DF0 DF0 E6 1
+text11 CODE 0 12BE 12BE 46 1
+text12 CODE 0 95E 95E 12E 1
+text13 CODE 0 1098 1098 6C 1
+text14 CODE 0 1358 1358 26 1
+text15 CODE 0 126C 126C 52 1
+text16 CODE 0 137E 137E 14 1
+text17 CODE 0 1218 1218 54 1
+text18 CODE 0 1104 1104 68 1
+text19 CODE 0 7B8 7B8 1A6 1
+text20 CODE 0 1392 1392 12 1
+text21 CODE 0 13A4 13A4 E 1
+cstackCOMRAM COMRAM 1 1 1 6D 1
+cstackBANK0 BANK0 1 80 80 4F 1
+smallconst SMALLCONST 0 600 600 12 1
+idataBANK0 CODE 0 1304 1304 2A 1
+idataBANK1 CODE 0 1020 1020 77 1
+dataBANK0 BANK0 1 CF CF 2A 1
+dataBANK1 BANK1 1 100 100 77 1
+bssCOMRAM COMRAM 1 6E 6E C 1
+config CONFIG 4 300000 300000 E 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM F9-FF 1
+RAM 177-5FF 1
+SFR F80-FFF 1
+BANK0 F9-FF 1
+BANK1 177-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+CONST 4-5FF 1
+CONST 1097-1097 1
+CONST 13C6-7FFF 1
+STACK 177-5FF 1
+SMALLCONST 1097-1097 1
+SMALLCONST 13C6-7FFF 1
+CODE 4-5FF 1
+CODE 1097-1097 1
+CODE 13C6-7FFF 1
+BIGRAM 7A-7F 1
+BIGRAM F9-FF 1
+BIGRAM 177-5FF 1
+COMRAM 7A-7F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 1097-1097 1
+MEDIUMCONST 13C6-7FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\Maquina_de_Cafe.X.production.obj
+13A4 text21 CODE >31:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+13A4 text21 CODE >34:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1392 text20 CODE >37:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1392 text20 CODE >40:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1396 text20 CODE >42:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+139A text20 CODE >40:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+7B8 text19 CODE >14:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+7B8 text19 CODE >16:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+7C8 text19 CODE >17:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+7EA text19 CODE >18:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+806 text19 CODE >19:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+816 text19 CODE >20:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+81E text19 CODE >21:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+840 text19 CODE >22:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+85C text19 CODE >23:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+86C text19 CODE >24:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+874 text19 CODE >25:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+896 text19 CODE >26:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+8B2 text19 CODE >27:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+8C2 text19 CODE >28:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+8CA text19 CODE >29:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+8EC text19 CODE >30:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+908 text19 CODE >31:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+918 text19 CODE >32:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+920 text19 CODE >33:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+942 text19 CODE >34:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+95C text19 CODE >38:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+1104 text18 CODE >48:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1106 text18 CODE >51:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+110A text18 CODE >54:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+110E text18 CODE >56:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1122 text18 CODE >57:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1126 text18 CODE >59:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+113A text18 CODE >60:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+114E text18 CODE >63:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1152 text18 CODE >65:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1160 text18 CODE >66:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1164 text18 CODE >67:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1166 text18 CODE >68:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+116A text18 CODE >72:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1218 text17 CODE >74:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+121A text17 CODE >78:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+121E text17 CODE >80:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1222 text17 CODE >81:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1236 text17 CODE >83:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+123A text17 CODE >85:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+124E text17 CODE >86:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1262 text17 CODE >88:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1266 text17 CODE >90:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+126A text17 CODE >92:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+137E text16 CODE >59:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+137E text16 CODE >61:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+1380 text16 CODE >62:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+1382 text16 CODE >64:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+1386 text16 CODE >65:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+1388 text16 CODE >68:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+138C text16 CODE >69:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+1390 text16 CODE >70:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+126C text15 CODE >7:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+126C text15 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+1274 text15 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+127C text15 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+1280 text15 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+1282 text15 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+1288 text15 CODE >18:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+128A text15 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+128E text15 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+1294 text15 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+12A0 text15 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+12A8 text15 CODE >24:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+12AA text15 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+12B0 text15 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+12B4 text15 CODE >28:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+12B4 text15 CODE >29:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+12BC text15 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+1358 text14 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul16.c
+1358 text14 CODE >37:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul16.c
+1364 text14 CODE >38:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul16.c
+136C text14 CODE >39:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul16.c
+1374 text14 CODE >52:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul16.c
+137C text14 CODE >53:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul16.c
+1098 text13 CODE >23:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+109A text13 CODE >30:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+10B8 text13 CODE >31:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+10D4 text13 CODE >33:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+10DC text13 CODE >35:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+10F4 text13 CODE >37:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+1102 text13 CODE >38:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\pwm.c
+95E text12 CODE >54:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+95E text12 CODE >58:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+962 text12 CODE >60:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+976 text12 CODE >61:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+98A text12 CODE >62:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+99E text12 CODE >63:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+9B2 text12 CODE >66:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+9B6 text12 CODE >69:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+9B8 text12 CODE >72:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+9CC text12 CODE >73:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+9E0 text12 CODE >74:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+9E4 text12 CODE >75:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+9E6 text12 CODE >78:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+9FA text12 CODE >79:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A0E text12 CODE >80:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A12 text12 CODE >81:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A14 text12 CODE >84:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A28 text12 CODE >85:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A3C text12 CODE >86:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A40 text12 CODE >87:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A42 text12 CODE >90:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A56 text12 CODE >91:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A6A text12 CODE >92:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A6E text12 CODE >93:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A70 text12 CODE >69:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A74 text12 CODE >69:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A7A text12 CODE >69:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A80 text12 CODE >69:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+A86 text12 CODE >69:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+12BE text11 CODE >10:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+12C0 text11 CODE >14:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+12C6 text11 CODE >15:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+12CC text11 CODE >16:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+12D2 text11 CODE >17:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+12E0 text11 CODE >16:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+12E8 text11 CODE >19:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+12EC text11 CODE >15:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+12F4 text11 CODE >21:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+12F8 text11 CODE >14:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+DF0 text10 CODE >25:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+DF0 text10 CODE >26:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+DF4 text10 CODE >29:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E06 text10 CODE >30:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E18 text10 CODE >32:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E1E text10 CODE >33:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E24 text10 CODE >34:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E28 text10 CODE >35:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E36 text10 CODE >34:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E3E text10 CODE >37:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E42 text10 CODE >38:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E48 text10 CODE >39:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E4E text10 CODE >40:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E54 text10 CODE >41:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E5A text10 CODE >43:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E5E text10 CODE >44:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E64 text10 CODE >45:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E68 text10 CODE >46:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E76 text10 CODE >45:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E7E text10 CODE >48:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E84 text10 CODE >54:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E96 text10 CODE >55:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+E9A text10 CODE >56:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+EA8 text10 CODE >55:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+EB0 text10 CODE >57:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+EB6 text10 CODE >58:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+EBC text10 CODE >59:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+EC2 text10 CODE >60:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+EC8 text10 CODE >61:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+ECE text10 CODE >62:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+ED4 text10 CODE >63:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela3.c
+A8C text9 CODE >39:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+A8C text9 CODE >47:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+A90 text9 CODE >51:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+A94 text9 CODE >53:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+A98 text9 CODE >55:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+A9C text9 CODE >57:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+AB4 text9 CODE >59:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+AB8 text9 CODE >60:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+AD2 text9 CODE >63:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+AEE text9 CODE >66:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+AF2 text9 CODE >67:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+B10 text9 CODE >68:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+B38 text9 CODE >69:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+B3A text9 CODE >70:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+B6A text9 CODE >66:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+B72 text9 CODE >53:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+B7A text9 CODE >74:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+B88 text9 CODE >75:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+B8A text9 CODE >76:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+B8C text9 CODE >77:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+B90 text9 CODE >78:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+B98 text9 CODE >79:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+B98 text9 CODE >80:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+B9E text9 CODE >81:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+BA6 text9 CODE >82:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+BA6 text9 CODE >83:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+BAA text9 CODE >84:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+BAE text9 CODE >85:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+13BC text8 CODE >35:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+13BC text8 CODE >36:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+13C4 text8 CODE >37:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+132E text7 CODE >38:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+1330 text7 CODE >39:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+1334 text7 CODE >40:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+1338 text7 CODE >42:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+133C text7 CODE >43:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+1340 text7 CODE >45:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+1346 text7 CODE >46:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+134A text7 CODE >48:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+1352 text7 CODE >49:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+1356 text7 CODE >52:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+CD0 text6 CODE >10:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+CD0 text6 CODE >12:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+CE2 text6 CODE >13:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+CF4 text6 CODE >14:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D06 text6 CODE >17:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D0C text6 CODE >18:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D10 text6 CODE >19:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D1E text6 CODE >18:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D26 text6 CODE >21:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D2C text6 CODE >22:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D30 text6 CODE >23:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D3E text6 CODE >22:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D46 text6 CODE >25:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D4C text6 CODE >26:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D50 text6 CODE >27:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D5E text6 CODE >26:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D66 text6 CODE >31:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D6A text6 CODE >32:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D6E text6 CODE >33:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D86 text6 CODE >34:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D8E text6 CODE >35:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+D96 text6 CODE >36:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+DA0 text6 CODE >37:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+DA6 text6 CODE >38:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+DAA text6 CODE >40:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+DB2 text6 CODE >41:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+DBC text6 CODE >42:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+DC2 text6 CODE >43:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+DC6 text6 CODE >45:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+DCE text6 CODE >46:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+DD8 text6 CODE >47:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+DDE text6 CODE >48:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+DE2 text6 CODE >51:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela2.c
+ED6 text5 CODE >11:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+ED6 text5 CODE >13:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+EE8 text5 CODE >14:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+EFA text5 CODE >18:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F00 text5 CODE >19:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F06 text5 CODE >20:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F14 text5 CODE >19:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F1E text5 CODE >22:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F24 text5 CODE >23:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F2A text5 CODE >24:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F38 text5 CODE >23:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F42 text5 CODE >28:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F46 text5 CODE >29:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F4A text5 CODE >30:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F64 text5 CODE >31:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F6E text5 CODE >32:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F76 text5 CODE >33:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F80 text5 CODE >34:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F86 text5 CODE >35:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F8A text5 CODE >37:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F92 text5 CODE >38:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+F9C text5 CODE >39:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+FA2 text5 CODE >40:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\tela1.c
+13B2 text4 CODE >87:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+13B2 text4 CODE >89:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+13B6 text4 CODE >91:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+13BA text4 CODE >92:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\keypad.c
+612 text3 CODE >54:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+612 text3 CODE >56:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+622 text3 CODE >57:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+644 text3 CODE >58:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+660 text3 CODE >59:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+670 text3 CODE >60:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+696 text3 CODE >61:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+6B6 text3 CODE >62:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+6C6 text3 CODE >63:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+6EC text3 CODE >64:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+70C text3 CODE >65:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+71C text3 CODE >66:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+742 text3 CODE >67:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+762 text3 CODE >68:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+772 text3 CODE >69:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+798 text3 CODE >70:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+7B6 text3 CODE >73:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\io.c
+FA8 text2 CODE >95:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+FA8 text2 CODE >97:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+FBC text2 CODE >98:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+FD0 text2 CODE >99:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+FD4 text2 CODE >102:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+FE8 text2 CODE >104:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+FEE text2 CODE >105:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+FF6 text2 CODE >106:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+FFC text2 CODE >107:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1000 text2 CODE >108:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1006 text2 CODE >110:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+100C text2 CODE >111:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1012 text2 CODE >114:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+1018 text2 CODE >115:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+101E text2 CODE >116:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\lcd.c
+11C2 text1 CODE >101:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+11C2 text1 CODE >103:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+11D6 text1 CODE >104:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+11EA text1 CODE >105:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+11FE text1 CODE >106:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+1212 text1 CODE >109:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+1216 text1 CODE >111:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\ssd.c
+BB0 text0 CODE >11:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+BB0 text0 CODE >14:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+BC2 text0 CODE >15:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+BCE text0 CODE >18:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+BD2 text0 CODE >19:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+BD8 text0 CODE >20:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+BDE text0 CODE >21:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+BEC text0 CODE >20:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+BF6 text0 CODE >23:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+BFC text0 CODE >24:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C02 text0 CODE >25:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C10 text0 CODE >24:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C1A text0 CODE >27:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C1E text0 CODE >28:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C22 text0 CODE >30:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C26 text0 CODE >31:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C40 text0 CODE >32:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C4A text0 CODE >33:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C52 text0 CODE >34:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C5C text0 CODE >35:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C62 text0 CODE >36:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C66 text0 CODE >39:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C74 text0 CODE >40:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C7A text0 CODE >46:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C8C text0 CODE >48:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+C92 text0 CODE >49:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+CA0 text0 CODE >48:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+CAA text0 CODE >50:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+CB0 text0 CODE >51:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+CB6 text0 CODE >52:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+CBC text0 CODE >53:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+CC2 text0 CODE >54:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+CC8 text0 CODE >55:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+CCE text0 CODE >56:C:\Users\KevinLukas\MPLABXProjects\Maquina_de_Cafe.X\main.c
+116C cinit CODE >1576:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+116C cinit CODE >1578:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+116C cinit CODE >1581:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+116C cinit CODE >1668:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+116E cinit CODE >1669:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1170 cinit CODE >1670:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1172 cinit CODE >1671:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1174 cinit CODE >1672:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1176 cinit CODE >1673:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1178 cinit CODE >1674:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+117C cinit CODE >1675:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1180 cinit CODE >1676:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1180 cinit CODE >1677:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1182 cinit CODE >1678:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1186 cinit CODE >1679:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1188 cinit CODE >1680:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+118A cinit CODE >1681:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+118C cinit CODE >1685:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+118E cinit CODE >1686:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1190 cinit CODE >1687:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1192 cinit CODE >1688:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1194 cinit CODE >1689:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1196 cinit CODE >1690:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+1198 cinit CODE >1691:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+119C cinit CODE >1692:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11A0 cinit CODE >1693:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11A0 cinit CODE >1694:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11A2 cinit CODE >1695:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11A6 cinit CODE >1696:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11A8 cinit CODE >1697:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11AA cinit CODE >1698:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11AC cinit CODE >1702:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11B0 cinit CODE >1703:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11B2 cinit CODE >1704:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11B2 cinit CODE >1705:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11B4 cinit CODE >1706:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11B6 cinit CODE >1707:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11B8 cinit CODE >1713:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11B8 cinit CODE >1716:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11BA cinit CODE >1717:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11BC cinit CODE >1718:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+11BE cinit CODE >1719:C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.as
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__LdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__LdataBANK1 0 0 ABS 0 dataBANK1 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hspace_0 13C6 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hspace_1 177 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hspace_2 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hspace_4 60000E 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_lcdData 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_lcdInit 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__HidataBANK1 0 0 ABS 0 idataBANK1 dist/default/production\Maquina_de_Cafe.X.production.obj
+lcdCommand@old_D 7 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Maquina_de_Cafe.X.production.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Maquina_de_Cafe.X.production.obj
+_ssdUpdate 95E 0 CODE 0 text12 dist/default/production\Maquina_de_Cafe.X.production.obj
+_v0 77 0 COMRAM 1 bssCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+_v1 76 0 COMRAM 1 bssCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+_v2 75 0 COMRAM 1 bssCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+_v3 74 0 COMRAM 1 bssCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+main@i CE 0 BANK0 1 cstackBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lsmallconst 600 0 SMALLCONST 0 smallconst dist/default/production\Maquina_de_Cafe.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+_main BB0 0 CODE 0 text0 dist/default/production\Maquina_de_Cafe.X.production.obj
+start 0 0 CODE 0 init C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_lcdCommand 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+?___wmul 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+kpDebounce@i A 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+kpDebounce@j 9 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+kpDebounce@k 7 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__LidataBANK1 0 0 ABS 0 idataBANK1 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hpowerup 0 0 CODE 0 powerup dist/default/production\Maquina_de_Cafe.X.production.obj
+_kpDebounce A8C 0 CODE 0 text9 dist/default/production\Maquina_de_Cafe.X.production.obj
+__accesstop 80 0 ABS 0 - C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+intlevel0 0 0 CODE 0 text C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+intlevel1 0 0 CODE 0 text C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+intlevel2 0 0 CODE 0 text C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+intlevel3 0 0 CODE 0 text C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+kpDebounce@old_D 6 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+kpDebounce@tempo 79 0 COMRAM 1 bssCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\Maquina_de_Cafe.X.production.obj
+___wmul@multiplicand 3 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_Delay2ms 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+Delay2ms@i 2 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+?_kpRead 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_Delay40us 13B2 0 CODE 0 text21 dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_lcdData 126C 0 CODE 0 text17 dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_lcdInit 1020 0 CODE 0 text2 dist/default/production\Maquina_de_Cafe.X.production.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+__size_of_Delay40us 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+kpDebounce@valorAntigo 6E 0 COMRAM 1 bssCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+_display 78 0 COMRAM 1 bssCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of___wmul 137E 0 CODE 0 text14 dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela1@i 98 0 BANK0 1 cstackBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela2@i 69 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela3@i 46 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Maquina_de_Cafe.X.production.obj
+main@F76 140 0 BANK1 1 dataBANK1 dist/default/production\Maquina_de_Cafe.X.production.obj
+main@F78 F6 0 BANK0 1 dataBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+main@F82 120 0 BANK1 1 dataBANK1 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_kpDebounce BB0 0 CODE 0 text9 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hintcodelo 0 0 CODE 0 intcodelo dist/default/production\Maquina_de_Cafe.X.production.obj
+_Delay40us 13A4 0 CODE 0 text21 dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of___lwdiv 12BE 0 CODE 0 text15 dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_ssdInit 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_pinMode 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela1@tecla 97 0 BANK0 1 cstackBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_Tela1 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_Tela2 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_Tela3 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+___lwdiv@quotient 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_tempo 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lintcodelo 0 0 CODE 0 intcodelo dist/default/production\Maquina_de_Cafe.X.production.obj
+_Delay2ms 1392 0 CODE 0 text20 dist/default/production\Maquina_de_Cafe.X.production.obj
+start_initialization 116C 0 CODE 0 cinit dist/default/production\Maquina_de_Cafe.X.production.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_kpInit 13BC 0 CODE 0 text4 dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_kpRead 13C6 0 CODE 0 text8 dist/default/production\Maquina_de_Cafe.X.production.obj
+_digitalWrite 7B8 0 CODE 0 text19 dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_Delay2ms 13A4 0 CODE 0 text20 dist/default/production\Maquina_de_Cafe.X.production.obj
+___rparam_used 1 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+pinMode@pin 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__pcstackBANK0 80 0 BANK0 1 cstackBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+isa$xinst 0 0 ABS 0 - C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+pwmSet1@porcento A 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_pwmInit 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_pwmSet1 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hconst 0 0 CONST 0 const dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hidata 0 0 CODE 0 idata dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hidloc 200008 0 IDLOC 5 idloc dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hstack 0 0 STACK 2 stack dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext0 0 0 ABS 0 text0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext1 0 0 ABS 0 text1 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext2 0 0 ABS 0 text2 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext3 0 0 ABS 0 text3 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext4 0 0 ABS 0 text4 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext5 0 0 ABS 0 text5 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext6 0 0 ABS 0 text6 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext7 0 0 ABS 0 text7 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext8 0 0 ABS 0 text8 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext9 0 0 ABS 0 text9 dist/default/production\Maquina_de_Cafe.X.production.obj
+___lwdiv@counter 7 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/production\Maquina_de_Cafe.X.production.obj
+__smallconst 600 0 SMALLCONST 0 smallconst C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+__Hcomram 0 0 ABS 0 comram dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hconfig 30000E 0 CONFIG 4 config dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_digitalWrite 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lconst 0 0 CONST 0 const dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lidata 0 0 CODE 0 idata dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lidloc 0 0 IDLOC 5 idloc dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lstack 0 0 STACK 2 stack dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_ssdInit 1218 0 CODE 0 text1 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_pinMode 7B8 0 CODE 0 text3 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hdata 0 0 ABS 0 data dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hinit 4 0 CODE 0 init dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htemp 0 0 COMRAM 1 temp dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext 0 0 ABS 0 text dist/default/production\Maquina_de_Cafe.X.production.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ldata 0 0 ABS 0 data dist/default/production\Maquina_de_Cafe.X.production.obj
+__Linit 0 0 CODE 0 init dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext 0 0 ABS 0 text dist/default/production\Maquina_de_Cafe.X.production.obj
+kpDebounce@valorNovo 70 0 COMRAM 1 bssCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+Delay40us@i 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+___wmul 1358 0 CODE 0 text14 dist/default/production\Maquina_de_Cafe.X.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hintret 0 0 ABS 0 intret dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/production\Maquina_de_Cafe.X.production.obj
+__S0 13C6 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__S1 177 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__S2 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__S4 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__S5 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_digitalWrite 95E 0 CODE 0 text19 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_kpDebounce 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+_lcdData 1218 0 CODE 0 text17 dist/default/production\Maquina_de_Cafe.X.production.obj
+_lcdInit FA8 0 CODE 0 text2 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hramtop 600 0 RAM 0 ramtop dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\Maquina_de_Cafe.X.production.obj
+__pdataBANK0 CF 0 BANK0 1 dataBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__pdataBANK1 100 0 BANK1 1 dataBANK1 dist/default/production\Maquina_de_Cafe.X.production.obj
+__activetblptr 2 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of___wmul 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext10 0 0 ABS 0 text10 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext11 0 0 ABS 0 text11 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext12 0 0 ABS 0 text12 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext13 0 0 ABS 0 text13 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext14 0 0 ABS 0 text14 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext15 0 0 ABS 0 text15 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext16 0 0 ABS 0 text16 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext17 0 0 ABS 0 text17 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext18 0 0 ABS 0 text18 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext19 0 0 ABS 0 text19 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext20 0 0 ABS 0 text20 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Htext21 0 0 ABS 0 text21 dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela2@tecla 67 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_pwmInit 1392 0 CODE 0 text16 dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_pwmSet1 1104 0 CODE 0 text13 dist/default/production\Maquina_de_Cafe.X.production.obj
+_kpInit 13B2 0 CODE 0 text4 dist/default/production\Maquina_de_Cafe.X.production.obj
+_kpRead 13BC 0 CODE 0 text8 dist/default/production\Maquina_de_Cafe.X.production.obj
+_valor@ssd$F163 601 0 SMALLCONST 0 smallconst dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext10 DF0 0 CODE 0 text10 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext11 12BE 0 CODE 0 text11 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext12 95E 0 CODE 0 text12 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext13 1098 0 CODE 0 text13 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext14 1358 0 CODE 0 text14 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext15 126C 0 CODE 0 text15 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext16 137E 0 CODE 0 text16 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext17 1218 0 CODE 0 text17 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext18 1104 0 CODE 0 text18 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext19 7B8 0 CODE 0 text19 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext20 1392 0 CODE 0 text20 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext21 13A4 0 CODE 0 text21 dist/default/production\Maquina_de_Cafe.X.production.obj
+___lwdiv 126C 0 CODE 0 text15 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/production\Maquina_de_Cafe.X.production.obj
+ssdDigit@pos 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+ssdDigit@val 2 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lcomram 0 0 ABS 0 comram dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lconfig 0 0 CONFIG 4 config dist/default/production\Maquina_de_Cafe.X.production.obj
+_lcdCommand 1104 0 CODE 0 text18 dist/default/production\Maquina_de_Cafe.X.production.obj
+___wmul@multiplier 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+main@msg1 B9 0 BANK0 1 cstackBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+main@msg2 C9 0 BANK0 1 cstackBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Maquina_de_Cafe.X.production.obj
+main@time CD 0 BANK0 1 cstackBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+___lwdiv@divisor 3 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+main@logo1 99 0 BANK0 1 cstackBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+main@tecla CC 0 BANK0 1 cstackBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\Maquina_de_Cafe.X.production.obj
+isa$std 1 0 ABS 0 - C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+stackhi 5FF 0 ABS 0 - C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+stacklo 177 0 ABS 0 - C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+pinMode@type 3 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lintcode 0 0 CODE 0 intcode dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lintret 0 0 ABS 0 intret dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_kpInit 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_kpRead 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_ssdDigit 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lspace_0 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lspace_1 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lspace_2 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lspace_4 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__pbssCOMRAM 6E 0 COMRAM 1 bssCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_valor@ssd$F163 611 0 SMALLCONST 0 smallconst dist/default/production\Maquina_de_Cafe.X.production.obj
+end_of_initialization 11B8 0 CODE 0 cinit dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/production\Maquina_de_Cafe.X.production.obj
+digitalWrite@pin 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+___lwdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+?___lwdiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela1@F76 ED 0 BANK0 1 dataBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela1@F78 15E 0 BANK1 1 dataBANK1 dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela2@F78 E3 0 BANK0 1 dataBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela2@F80 D9 0 BANK0 1 dataBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela2@F82 CF 0 BANK0 1 dataBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela3@F92 16C 0 BANK1 1 dataBANK1 dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela3@F94 150 0 BANK1 1 dataBANK1 dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela3@F96 100 0 BANK1 1 dataBANK1 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hreset_vec 0 0 CODE 0 reset_vec dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lramtop 600 0 RAM 0 ramtop dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\Maquina_de_Cafe.X.production.obj
+__pcinit 116C 0 CODE 0 cinit dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_lcdCommand 116C 0 CODE 0 text18 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext0 BB0 0 CODE 0 text0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext1 11C2 0 CODE 0 text1 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext2 FA8 0 CODE 0 text2 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext3 612 0 CODE 0 text3 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext4 13B2 0 CODE 0 text4 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext5 ED6 0 CODE 0 text5 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext6 CD0 0 CODE 0 text6 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext7 132E 0 CODE 0 text7 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext8 13BC 0 CODE 0 text8 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ptext9 A8C 0 CODE 0 text9 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\Maquina_de_Cafe.X.production.obj
+pwmSet1@val B 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext11 0 0 ABS 0 text11 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext12 0 0 ABS 0 text12 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext13 0 0 ABS 0 text13 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext14 0 0 ABS 0 text14 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext15 0 0 ABS 0 text15 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext16 0 0 ABS 0 text16 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext17 0 0 ABS 0 text17 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext18 0 0 ABS 0 text18 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext19 0 0 ABS 0 text19 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext20 0 0 ABS 0 text20 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Ltext21 0 0 ABS 0 text21 dist/default/production\Maquina_de_Cafe.X.production.obj
+__ramtop 600 0 RAM 0 ramtop C:\Users\KEVINL~1\AppData\Local\Temp\xcAs2po.obj
+Tela1@msg1 8E 0 BANK0 1 cstackBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela1@msg2 80 0 BANK0 1 cstackBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup dist/default/production\Maquina_de_Cafe.X.production.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela2@msg1 49 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela2@msg2 53 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela2@msg3 5D 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela2@time 68 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__psmallconst 600 0 SMALLCONST 0 smallconst dist/default/production\Maquina_de_Cafe.X.production.obj
+_ssdInit 11C2 0 CODE 0 text1 dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela3@msg1 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela3@msg2 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+_ssdDigit 132E 0 CODE 0 text7 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Maquina_de_Cafe.X.production.obj
+_pinMode 612 0 CODE 0 text3 dist/default/production\Maquina_de_Cafe.X.production.obj
+___param_bank 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of__initialization 11B8 0 CODE 0 cinit dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_ssdDigit 1358 0 CODE 0 text7 dist/default/production\Maquina_de_Cafe.X.production.obj
+tempo@i C 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+tempo@j A 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+tempo@k B 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+tempo@l 9 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+tempo@v 8 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\Maquina_de_Cafe.X.production.obj
+__pidataBANK0 1304 0 CODE 0 idataBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__pidataBANK1 1020 0 CODE 0 idataBANK1 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\Maquina_de_Cafe.X.production.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+Tela3@logo1 D 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+lcdCommand@cmd 8 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_main CD0 0 CODE 0 text0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_Tela1 FA8 0 CODE 0 text5 dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_Tela2 DF0 0 CODE 0 text6 dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_Tela3 ED6 0 CODE 0 text10 dist/default/production\Maquina_de_Cafe.X.production.obj
+_PORTA F80 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+_PORTB F81 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+_PORTC F82 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+_PORTD F83 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+_PORTE F84 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+_TRISA F92 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+_TRISB F93 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+_TRISC F94 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+_TRISD F95 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+_TRISE F96 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+_Tela1 ED6 0 CODE 0 text5 dist/default/production\Maquina_de_Cafe.X.production.obj
+_Tela2 CD0 0 CODE 0 text6 dist/default/production\Maquina_de_Cafe.X.production.obj
+_Tela3 DF0 0 CODE 0 text10 dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_tempo 1304 0 CODE 0 text11 dist/default/production\Maquina_de_Cafe.X.production.obj
+__HRAM 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hbss 0 0 RAM 1 bss dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hram 0 0 ABS 0 ram dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/production\Maquina_de_Cafe.X.production.obj
+__LRAM 1 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lbss 0 0 RAM 1 bss dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lram 0 0 ABS 0 ram dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/production\Maquina_de_Cafe.X.production.obj
+_tempo 12BE 0 CODE 0 text11 dist/default/production\Maquina_de_Cafe.X.production.obj
+_valor 72 0 COMRAM 1 bssCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\Maquina_de_Cafe.X.production.obj
+__HdataBANK1 0 0 ABS 0 dataBANK1 dist/default/production\Maquina_de_Cafe.X.production.obj
+_pwmInit 137E 0 CODE 0 text16 dist/default/production\Maquina_de_Cafe.X.production.obj
+_pwmSet1 1098 0 CODE 0 text13 dist/default/production\Maquina_de_Cafe.X.production.obj
+__initialization 116C 0 CODE 0 cinit dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\Maquina_de_Cafe.X.production.obj
+___wmul@product 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hsmallconst 612 0 SMALLCONST 0 smallconst dist/default/production\Maquina_de_Cafe.X.production.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\Maquina_de_Cafe.X.production.obj
+lcdData@old_D 8 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+lcdData@valor 7 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+__end_of_ssdUpdate A8C 0 CODE 0 text12 dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Maquina_de_Cafe.X.production.obj
+__Hintcode 0 0 CODE 0 intcode dist/default/production\Maquina_de_Cafe.X.production.obj
+__size_of_ssdUpdate 0 0 ABS 0 - dist/default/production\Maquina_de_Cafe.X.production.obj
+digitalWrite@value 3 0 COMRAM 1 cstackCOMRAM dist/default/production\Maquina_de_Cafe.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text3 0 612 612 A85 1
+text13 0 1098 1098 32E 1
+cstackCOMRAM 1 1 1 79 1
+cstackBANK0 1 80 80 79 1
+reset_vec 0 0 0 4 1
+smallconst 0 600 600 12 1
+dataBANK1 1 100 100 77 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

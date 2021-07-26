@@ -1,0 +1,340 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"23 lcd.h
+[v _lcdCommand `(v ~T0 @X0 0 ef1`uc ]
+"24
+[v _lcdData `(v ~T0 @X0 0 ef1`uc ]
+"23 ssd.h
+[v _ssdUpdate `(v ~T0 @X0 0 ef ]
+"24 keypad.h
+[v _kpDebounce `(v ~T0 @X0 0 ef ]
+"23
+[v _kpRead `(ui ~T0 @X0 0 ef ]
+"22 ssd.h
+[v _ssdDigit `(v ~T0 @X0 0 ef2`uc`uc ]
+"4 tela3.h
+[v _Tela3 `(v ~T0 @X0 0 ef ]
+[; ;tela2.h: 4: void Tela2(void);
+[; ;tela3.h: 4: void Tela3(void);
+[; ;tela3.h: 5: void tempo(unsigned char v);
+"26 config.h
+[p x OSC=HS ]
+"27
+[p x FCMEN=OFF ]
+"28
+[p x IESO=OFF ]
+"29
+[p x PWRT=OFF ]
+"30
+[p x BOREN=OFF ]
+"31
+[p x BORV=2 ]
+"32
+[p x WDT=OFF ]
+"33
+[p x WDTPS=1 ]
+"34
+[p x MCLRE=ON ]
+"35
+[p x LPT1OSC=OFF ]
+"36
+[p x PBADEN=ON ]
+"37
+[p x CCP2MX=PORTC ]
+"38
+[p x STVREN=OFF ]
+"39
+[p x LVP=OFF ]
+"40
+[p x XINST=OFF ]
+"41
+[p x DEBUG=OFF ]
+"43
+[p x CP0=OFF ]
+"44
+[p x CP1=OFF ]
+"45
+[p x CP2=OFF ]
+"46
+[p x CP3=OFF ]
+"47
+[p x CPB=OFF ]
+"48
+[p x CPD=OFF ]
+"50
+[p x WRT0=OFF ]
+"51
+[p x WRT1=OFF ]
+"52
+[p x WRT2=OFF ]
+"53
+[p x WRT3=OFF ]
+"54
+[p x WRTB=OFF ]
+"55
+[p x WRTC=OFF ]
+"56
+[p x WRTD=OFF ]
+"58
+[p x EBTR0=OFF ]
+"59
+[p x EBTR1=OFF ]
+"60
+[p x EBTR2=OFF ]
+"61
+[p x EBTR3=OFF ]
+"62
+[p x EBTRB=OFF ]
+[; ;lcd.h: 23: void lcdCommand(unsigned char cmd);
+[; ;lcd.h: 24: void lcdData(unsigned char valor);
+[; ;lcd.h: 25: void lcdInit(void);
+[; ;ssd.h: 22: void ssdDigit(char val, char pos);
+[; ;ssd.h: 23: void ssdUpdate(void);
+[; ;ssd.h: 24: void ssdInit(void);
+[; ;io.h: 12: enum pin_label{
+[; ;io.h: 13: PIN_A0,PIN_A1,PIN_A2,PIN_A3,PIN_A4,PIN_A5,PIN_A6,PIN_A7,
+[; ;io.h: 14: PIN_B0,PIN_B1,PIN_B2,PIN_B3,PIN_B4,PIN_B5,PIN_B6,PIN_B7,
+[; ;io.h: 15: PIN_C0,PIN_C1,PIN_C2,PIN_C3,PIN_C4,PIN_C5,PIN_C6,PIN_C7,
+[; ;io.h: 16: PIN_D0,PIN_D1,PIN_D2,PIN_D3,PIN_D4,PIN_D5,PIN_D6,PIN_D7,
+[; ;io.h: 17: PIN_E0,PIN_E1,PIN_E2,PIN_E3,PIN_E4,PIN_E5,PIN_E6,PIN_E7
+[; ;io.h: 18: };
+[; ;io.h: 20: void digitalWrite(int pin, int value);
+[; ;io.h: 21: int digitalRead(int pin);
+[; ;io.h: 22: void pinMode(int pin, int type);
+[; ;keypad.h: 23: unsigned int kpRead(void);
+[; ;keypad.h: 24: void kpDebounce(void);
+[; ;keypad.h: 25: void kpInit(void);
+"10 tela2.c
+[v _Tela2 `(v ~T0 @X0 1 ef ]
+{
+[; ;tela2.c: 10: void Tela2(void) {
+[e :U _Tela2 ]
+[f ]
+"11
+[v _i `uc ~T0 @X0 1 a ]
+[v F78 `uc ~T0 @X0 -> 10 `i s ]
+[i F78
+:U ..
+-> 70 `c
+-> 111 `c
+-> 114 `c
+-> 116 `c
+-> 101 `c
+-> 32 `c
+-> 40 `c
+-> 52 `c
+-> 41 `c
+-> 0 `c
+..
+]
+"12
+[v _msg1 `uc ~T0 @X0 -> 10 `i a ]
+[; ;tela2.c: 11: char i;
+[; ;tela2.c: 12: char msg1[10] = "Forte (4)";
+[e = _msg1 F78 ]
+[v F80 `uc ~T0 @X0 -> 10 `i s ]
+[i F80
+:U ..
+-> 77 `c
+-> 101 `c
+-> 100 `c
+-> 105 `c
+-> 111 `c
+-> 32 `c
+-> 40 `c
+-> 53 `c
+-> 41 `c
+-> 0 `c
+..
+]
+"13
+[v _msg2 `uc ~T0 @X0 -> 10 `i a ]
+[; ;tela2.c: 13: char msg2[10] = "Medio (5)";
+[e = _msg2 F80 ]
+[v F82 `uc ~T0 @X0 -> 10 `i s ]
+[i F82
+:U ..
+-> 70 `c
+-> 114 `c
+-> 97 `c
+-> 99 `c
+-> 111 `c
+-> 32 `c
+-> 40 `c
+-> 54 `c
+-> 41 `c
+-> 0 `c
+..
+]
+"14
+[v _msg3 `uc ~T0 @X0 -> 10 `i a ]
+[; ;tela2.c: 14: char msg3[10] = "Fraco (6)";
+[e = _msg3 F82 ]
+"15
+[v _time `uc ~T0 @X0 1 a ]
+"16
+[v _tecla `uc ~T0 @X0 1 a ]
+[; ;tela2.c: 15: char time;
+[; ;tela2.c: 16: unsigned char tecla;
+[; ;tela2.c: 17: lcdCommand(0X80);
+"17
+[e ( _lcdCommand (1 -> -> 128 `i `uc ]
+[; ;tela2.c: 18: for (i = 0; i < 9; i++) {
+"18
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 9 `i 2  ]
+[e $U 3  ]
+[e :U 2 ]
+{
+[; ;tela2.c: 19: lcdData(msg1[i]);
+"19
+[e ( _lcdData (1 *U + &U _msg1 * -> _i `ux -> -> # *U &U _msg1 `ui `ux ]
+"20
+}
+"18
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 9 `i 2  ]
+[e :U 3 ]
+"20
+}
+[; ;tela2.c: 20: }
+[; ;tela2.c: 21: lcdCommand(0XC0);
+"21
+[e ( _lcdCommand (1 -> -> 192 `i `uc ]
+[; ;tela2.c: 22: for (i = 0; i < 9; i++) {
+"22
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 9 `i 5  ]
+[e $U 6  ]
+[e :U 5 ]
+{
+[; ;tela2.c: 23: lcdData(msg2[i]);
+"23
+[e ( _lcdData (1 *U + &U _msg2 * -> _i `ux -> -> # *U &U _msg2 `ui `ux ]
+"24
+}
+"22
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 9 `i 5  ]
+[e :U 6 ]
+"24
+}
+[; ;tela2.c: 24: }
+[; ;tela2.c: 25: lcdCommand(0X90);
+"25
+[e ( _lcdCommand (1 -> -> 144 `i `uc ]
+[; ;tela2.c: 26: for (i = 0; i < 9; i++) {
+"26
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 9 `i 8  ]
+[e $U 9  ]
+[e :U 8 ]
+{
+[; ;tela2.c: 27: lcdData(msg3[i]);
+"27
+[e ( _lcdData (1 *U + &U _msg3 * -> _i `ux -> -> # *U &U _msg3 `ui `ux ]
+"28
+}
+"26
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 9 `i 8  ]
+[e :U 9 ]
+"28
+}
+[; ;tela2.c: 28: }
+[; ;tela2.c: 30: for (;;) {
+"30
+{
+[e :U 11 ]
+{
+[; ;tela2.c: 31: ssdUpdate();
+"31
+[e ( _ssdUpdate ..  ]
+[; ;tela2.c: 32: kpDebounce();
+"32
+[e ( _kpDebounce ..  ]
+[; ;tela2.c: 33: if (kpRead() != tecla) {
+"33
+[e $ ! != ( _kpRead ..  -> _tecla `ui 14  ]
+{
+[; ;tela2.c: 34: tecla = kpRead();
+"34
+[e = _tecla -> ( _kpRead ..  `uc ]
+[; ;tela2.c: 35: if (((kpRead()) & (1<<(2)))) {
+"35
+[e $ ! != & ( _kpRead ..  -> << -> 1 `i -> 2 `i `ui -> -> 0 `i `ui 15  ]
+{
+[; ;tela2.c: 36: ssdDigit(4, 3);
+"36
+[e ( _ssdDigit (2 , -> -> 4 `i `uc -> -> 3 `i `uc ]
+[; ;tela2.c: 37: lcdCommand(0x01);
+"37
+[e ( _lcdCommand (1 -> -> 1 `i `uc ]
+[; ;tela2.c: 38: Tela3();
+"38
+[e ( _Tela3 ..  ]
+"39
+}
+[e :U 15 ]
+[; ;tela2.c: 39: }
+[; ;tela2.c: 40: if (((kpRead()) & (1<<(6)))) {
+"40
+[e $ ! != & ( _kpRead ..  -> << -> 1 `i -> 6 `i `ui -> -> 0 `i `ui 16  ]
+{
+[; ;tela2.c: 41: ssdDigit(5, 3);
+"41
+[e ( _ssdDigit (2 , -> -> 5 `i `uc -> -> 3 `i `uc ]
+[; ;tela2.c: 42: lcdCommand(0x01);
+"42
+[e ( _lcdCommand (1 -> -> 1 `i `uc ]
+[; ;tela2.c: 43: Tela3();
+"43
+[e ( _Tela3 ..  ]
+"44
+}
+[e :U 16 ]
+[; ;tela2.c: 44: }
+[; ;tela2.c: 45: if (((kpRead()) & (1<<(10)))) {
+"45
+[e $ ! != & ( _kpRead ..  -> << -> 1 `i -> 10 `i `ui -> -> 0 `i `ui 17  ]
+{
+[; ;tela2.c: 46: ssdDigit(6, 3);
+"46
+[e ( _ssdDigit (2 , -> -> 6 `i `uc -> -> 3 `i `uc ]
+[; ;tela2.c: 47: lcdCommand(0x01);
+"47
+[e ( _lcdCommand (1 -> -> 1 `i `uc ]
+[; ;tela2.c: 48: Tela3();
+"48
+[e ( _Tela3 ..  ]
+"49
+}
+[e :U 17 ]
+"50
+}
+[e :U 14 ]
+[; ;tela2.c: 49: }
+[; ;tela2.c: 50: }
+[; ;tela2.c: 51: for (time = 0; time < 100; time++);
+"51
+{
+[e = _time -> -> 0 `i `uc ]
+[e $ < -> _time `i -> 100 `i 18  ]
+[e $U 19  ]
+[e :U 18 ]
+[e ++ _time -> -> 1 `i `uc ]
+[e $ < -> _time `i -> 100 `i 18  ]
+[e :U 19 ]
+}
+"52
+}
+[; ;tela2.c: 52: }
+[e $U 11  ]
+[e :U 12 ]
+}
+[; ;tela2.c: 53: }
+"53
+[e :UE 1 ]
+}

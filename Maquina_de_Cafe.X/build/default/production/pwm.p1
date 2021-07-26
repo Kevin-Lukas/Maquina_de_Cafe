@@ -1,0 +1,115 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;pwm.h: 23: void pwmSet1(unsigned char porcento);
+[; ;pwm.h: 24: void pwmSet2(unsigned char porcento);
+[; ;pwm.h: 25: void pwmFrequency(unsigned int freq);
+[; ;pwm.h: 26: void pwmInit(void);
+"23 pwm.c
+[v _pwmSet1 `(v ~T0 @X0 1 ef1`uc ]
+"24
+{
+[; ;pwm.c: 23: void pwmSet1(unsigned char porcento)
+[; ;pwm.c: 24: {
+[e :U _pwmSet1 ]
+"23
+[v _porcento `uc ~T0 @X0 1 r1 ]
+"24
+[f ]
+"30
+[v _val `ui ~T0 @X0 1 a ]
+[; ;pwm.c: 30: unsigned int val = ((unsigned int)porcento) *((*(volatile __near unsigned char*)0xFCB)+1);
+[e = _val * -> _porcento `ui -> + -> *U -> -> 4043 `i `*VNuc `i -> 1 `i `ui ]
+[; ;pwm.c: 31: val = val / 25;
+"31
+[e = _val / _val -> -> 25 `i `ui ]
+[; ;pwm.c: 33: val &= 0x03ff;
+"33
+[e =& _val -> -> 1023 `i `ui ]
+[; ;pwm.c: 35: (*(volatile __near unsigned char*)0xFBE) = val >> 2;
+"35
+[e = *U -> -> 4030 `i `*VNuc -> >> _val -> 2 `i `uc ]
+[; ;pwm.c: 37: (*(volatile __near unsigned char*)0xFBD) |= (val & 0x0003) << 4;
+"37
+[e =| *U -> -> 4029 `i `*VNuc -> << & _val -> -> 3 `i `ui -> 4 `i `uc ]
+[; ;pwm.c: 38: }
+"38
+[e :UE 1 ]
+}
+"40
+[v _pwmSet2 `(v ~T0 @X0 1 ef1`uc ]
+"41
+{
+[; ;pwm.c: 40: void pwmSet2(unsigned char porcento)
+[; ;pwm.c: 41: {
+[e :U _pwmSet2 ]
+"40
+[v _porcento `uc ~T0 @X0 1 r1 ]
+"41
+[f ]
+"42
+[v _val `ui ~T0 @X0 1 a ]
+[; ;pwm.c: 42: unsigned int val = ((unsigned int)porcento) *((*(volatile __near unsigned char*)0xFCB)+1);
+[e = _val * -> _porcento `ui -> + -> *U -> -> 4043 `i `*VNuc `i -> 1 `i `ui ]
+[; ;pwm.c: 43: val /= 25;
+"43
+[e =/ _val -> -> 25 `uc `ui ]
+[; ;pwm.c: 45: val &= 0x03ff;
+"45
+[e =& _val -> -> 1023 `i `ui ]
+[; ;pwm.c: 47: (*(volatile __near unsigned char*)0xFBB) = val >> 2;
+"47
+[e = *U -> -> 4027 `i `*VNuc -> >> _val -> 2 `i `uc ]
+[; ;pwm.c: 49: (*(volatile __near unsigned char*)0xFBA) |= (val & 0x0003) << 4;
+"49
+[e =| *U -> -> 4026 `i `*VNuc -> << & _val -> -> 3 `i `ui -> 4 `i `uc ]
+[; ;pwm.c: 50: }
+"50
+[e :UE 2 ]
+}
+"52
+[v _pwmFrequency `(v ~T0 @X0 1 ef1`ui ]
+"53
+{
+[; ;pwm.c: 52: void pwmFrequency(unsigned int freq)
+[; ;pwm.c: 53: {
+[e :U _pwmFrequency ]
+"52
+[v _freq `ui ~T0 @X0 1 r1 ]
+"53
+[f ]
+[; ;pwm.c: 56: (*(volatile __near unsigned char*)0xFCB) = (125000/(freq)) - 1;
+"56
+[e = *U -> -> 4043 `i `*VNuc -> - / -> 125000 `l -> _freq `l -> -> 1 `i `l `uc ]
+[; ;pwm.c: 57: }
+"57
+[e :UE 3 ]
+}
+"59
+[v _pwmInit `(v ~T0 @X0 1 ef ]
+"60
+{
+[; ;pwm.c: 59: void pwmInit(void)
+[; ;pwm.c: 60: {
+[e :U _pwmInit ]
+[f ]
+[; ;pwm.c: 61: (((*(volatile __near unsigned char*)0xF94)) &= ~(1<<1));
+"61
+[e =& *U -> -> 3988 `i `*VNuc -> ~ << -> 1 `i -> 1 `i `uc ]
+[; ;pwm.c: 62: (((*(volatile __near unsigned char*)0xF94)) &= ~(1<<2));
+"62
+[e =& *U -> -> 3988 `i `*VNuc -> ~ << -> 1 `i -> 2 `i `uc ]
+[; ;pwm.c: 64: (*(volatile __near unsigned char*)0xFCA) |= 0b00000011;
+"64
+[e =| *U -> -> 4042 `i `*VNuc -> -> 3 `i `uc ]
+[; ;pwm.c: 65: (((*(volatile __near unsigned char*)0xFCA)) |= (1<<2));
+"65
+[e =| *U -> -> 4042 `i `*VNuc -> << -> 1 `i -> 2 `i `uc ]
+[; ;pwm.c: 68: (*(volatile __near unsigned char*)0xFBD) |= 0b00001100;
+"68
+[e =| *U -> -> 4029 `i `*VNuc -> -> 12 `i `uc ]
+[; ;pwm.c: 69: (*(volatile __near unsigned char*)0xFBA) |= 0b00001100;
+"69
+[e =| *U -> -> 4026 `i `*VNuc -> -> 12 `i `uc ]
+[; ;pwm.c: 70: }
+"70
+[e :UE 4 ]
+}
